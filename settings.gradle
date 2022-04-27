@@ -16,5 +16,5 @@ dependencyResolutionManagement {
         maven { url 'https://jcenter.bintray.com' }
     }
 }
-rootProject.name = "SDK VideoConsultation Example"
+rootProject.name = "sdk-video-android-example"
 include ':app'

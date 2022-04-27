@@ -15,7 +15,7 @@ import docline.doclinevideosdk.core.listeners.enums.UserType
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var doclineVideoCall: DoclineVideocallView
+    private lateinit var doclineVideoCall: DoclineVideocallView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,17 +30,19 @@ class MainActivity : AppCompatActivity() {
 
         // join to video consultation
         joinVideoConsultation(
-            server = your-server-url
-            code = your-code-room
+            server = your_server_url,
+            code = your_room_code,
+            showSetupScreen = true
         )
 
     }
 
-    private fun joinVideoConsultation(server: String, code: String) {
+    private fun joinVideoConsultation(server: String, code: String, showSetupScreen: Boolean) {
         // prepare configuration (roomCode and serverURL)
         val configuration = hashMapOf<String, Any>(
             "serverURL" to server,  // server URL to join to the video consultation
-            "roomCode" to code      // code to join to the video consultation
+            "roomCode" to code,     // code to join to the video consultation
+            "enableSetupScreen" to showSetupScreen // shows a previous video consultation screen
         )
 
         // join to the video with the previous configuration defined
