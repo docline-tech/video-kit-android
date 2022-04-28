@@ -34,7 +34,7 @@ android {
 }
 dependencies {
     ...
-    implementation 'io.docline:video-consultation:1.0.5'
+    implementation 'io.docline:video-consultation:1.0.6.1'
 }
 ```
 In file `colors.xml`, you must define `colorPrimaryDark` color:
