@@ -41,14 +41,6 @@ dependencies {
     implementation 'io.docline:video-consultation:1.1.0'
 }
 ```
-In file `colors.xml`, you must define `colorPrimaryDark` color:
-```
-<resources>
-    ...
-    <color name="colorPrimaryDark">your-dark-color-here</color>
-    ...
-</resources>
-```
 
 ## Simple usage:
 Add our component to your layout.xml:
