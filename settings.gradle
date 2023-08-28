@@ -10,10 +10,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-
+        maven { url "https://jitpack.io" }
         maven { url 'https://nexus.docline.com/repository/maven-public/' }
-        maven { url 'https://tokbox.bintray.com/maven' }
-        maven { url 'https://jcenter.bintray.com' }
     }
 }
 rootProject.name = "sdk-video-android-example"

@@ -1,5 +1,11 @@
 # SDK Video consultation Example
 
+## Requisites
+    * Android SDK min version: 23 - Android 6.0 (Marshmallow).
+    * Java Virtual Machine 17.
+    * Docline API videocalls service available.
+
+
 ## Configuration:
 You need add the following lines to `settings.gradle` (root project) in order to find libraries in maven repositories:
 ```
@@ -16,25 +22,23 @@ dependencyResolutionManagement {
 Also, you need to add the following code to your `build.gradle` (app root folder):
 ```
 plugins {
-    ...
     id 'kotlin-kapt'
 }
 android {
-    ...
-    dataBinding {
-        enabled = true
-    }
-    viewBinding {
-        enabled = true
-    }
+    kotlinOptions {  
+	    jvmTarget = '17'  
+	}
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
+    buildFeatures {  
+	  dataBinding = true  
+	  viewBinding = true  
+	}
 }
 dependencies {
-    ...
-    implementation 'io.docline:video-consultation:1.0.6.1'
+    implementation 'io.docline:video-consultation:1.1.0'
 }
 ```
 In file `colors.xml`, you must define `colorPrimaryDark` color:
